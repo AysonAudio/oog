@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Install All Recommended Extensions",
+            "command": "npx node-jq -r '.recommendations[]' ./.vscode/extensions.json | xargs -L 1 code --install-extension",
+            "type": "shell",
+            "promptOnClose": true,
+            "runOptions": {
+                // "runOn": "folderOpen"
+            },
+
+            "presentation": {
+                "focus": true,
+                "group": "installExtensions",
+                "revealProblems": "onProblem",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
+        {
+            "label": "Install Hollow Knight Theme",
+            "command": "${command:synthwave84.enableNeon} && ${command:extension.updateCustomCSS}",
+            "type": "process",
+            "promptOnClose": true,
+            "runOptions": {
+                // "runOn": "folderOpen"
+            },
+
+            "presentation": {
+                "focus": true,
+                "group": "installExtensions",
+                "revealProblems": "onProblem",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
+    ]
+}

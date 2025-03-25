@@ -1,0 +1,96 @@
+{
+    "dotnet.defaultSolution": "unity/oog/oog.sln",
+
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "README*": "NOTES",
+        "oog.sln": "*.csproj"
+    },
+    "files.exclude": {
+        "**/*.meta": true
+    },
+
+    "editor.lineDecorationsWidth": 8,
+    "editor.lineNumbersMinChars": 4,
+    "editor.glyphMargin": false,
+    "editor.folding": false,
+    "editor.lineNumbers": "on",
+    "editor.showFoldingControls": "mouseover",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+
+    "unity-code-snippets.style": "kr",
+    "unity-code-snippets.usePrivateKeyword": false,
+
+    "powermode.enabled": true,
+    "powermode.combo.threshold": 5,
+    "powermode.combo.timeout": 2,
+    "powermode.shake.intensity": 2,
+    "powermode.combo.location": "editor",
+
+    "workbench.colorTheme": "Hollow Knight Color Theme for Unity",
+    "background.enabled": true,
+    "background.editor": {
+        "useFront": false,
+        "style": {
+            "background-size": "cover",
+            "opacity": 0.18
+        },
+        "styles": [
+            {"background-position": "0 35%"},
+            {"background-position": "0 10%"},
+            {"background-position": "50% 0%"},
+            {"background-position": "50% 0"},
+            {"background-position": "0 0"},
+            {"background-position": "50% 0"},
+            {"background-position": "0 0"},
+            {"background-position": "60% 0"},
+            {"background-position": "35% 0"}
+        ],
+        "images": [
+            "https://cdna.artstation.com/p/assets/images/images/018/918/692/large/z-w-gu-excal3b.jpg?1561248841",
+            "https://cdnb.artstation.com/p/assets/images/images/028/138/783/large/z-w-gu-watchingf2.jpg?1593596698",
+            "https://cdna.artstation.com/p/assets/images/images/028/138/058/large/z-w-gu-bandageb5f.jpg?1593594749",
+            "https://cdnb.artstation.com/p/assets/images/images/023/848/505/large/z-w-gu-canal.jpg?1580519745",
+            "https://cdna.artstation.com/p/assets/images/images/023/848/572/large/z-w-gu-punk.jpg?1580519926",
+            "https://cdna.artstation.com/p/assets/images/images/023/848/644/large/z-w-gu-5b.jpg?1580520356",
+            "https://cdna.artstation.com/p/assets/images/images/021/753/686/large/z-w-gu-stasdg4a.jpg?1572837857",
+            "https://cdnb.artstation.com/p/assets/images/images/004/510/039/large/z-w-gu-hoood.jpg?1484184743",
+            "https://cdnb.artstation.com/p/assets/images/images/004/504/851/large/z-w-gu-img-20161019-132558.jpg?1484153543"
+        ],
+        "interval": 30,
+        "random": true
+    },
+    "background.panel": {
+        "images": [
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_0.jpg",
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_2.jpg",
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_4.jpg",
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_6.jpg",
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_7.jpg",
+        ],
+        "opacity": 0.18,
+        "size": "cover",
+        "position": "center",
+        "interval": 30,
+        "random": true
+    },
+    "background.sidebar": {
+        "images": [
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_0.jpg",
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_2.jpg",
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_4.jpg",
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_6.jpg",
+            "https://cdn.melvor.net/core/v018/assets/media/main/bg_7.jpg",
+        ],
+        "opacity": 0.1,
+        "size": "cover",
+        "position": "center",
+        "interval": 30,
+        "random": true
+    },
+    "vscode_custom_css.imports": [
+        "file:///${userHome}${/}.vscode${/}extensions${/}robbowen.synthwave-vscode-0.1.17${/}synthwave84.css",
+    ],
+}
