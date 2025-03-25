@@ -1,0 +1,20 @@
+{
+    "recommendations": [
+        // C# Unity Development
+        "visualstudiotoolsforunity.vstuc",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "kleber-swf.unity-code-snippets",
+
+        // Other Language Support
+        "zainchen.json",
+        "tomoki1207.pdf",
+    
+        // General Productivity
+        "zfzackfrost.commentbars",
+    
+        // Themes
+        "emericoude.hollow-knight-extension-pack"
+    ]
+}
