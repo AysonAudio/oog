@@ -1,0 +1,4 @@
+
+# This .vscode workspace folder is auto-generated when .csproj files are generated
+# But it is redundant, since one already exists above the unity/ directory
+.vscode/
