@@ -1,0 +1,18 @@
+{
+    "name": "MainMenu",
+    "rootNamespace": "Oog",
+    "references": [
+        "GUID:e9254b04f98c42c381d0f02c0319ce49",
+        "GUID:68550284b645f4b9894995579f34290a",
+        "GUID:dc35e41c245b4e4fa7fa06fe0f201fb9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+@import url("/Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss");
+
+.footer {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+}
+
+#start-button {
+    position: relative;
+    width: 220px;
+    height: 60px;
+    padding: 8px 35px 8px 0;
+    font-size: 20px;
+}
