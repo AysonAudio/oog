@@ -6,11 +6,11 @@ using UnityEngine.UIElements;
 namespace Oog.Modules.MainMenu {
 
 /// <summary>
-/// Registers callbacks for the main menu start button.
-/// On click, slides the button off-screen over time.
-/// At the end, disables the button's GameObject.
+///     Registers callbacks for the main menu start button.
+///     On click, slides the button off-screen over time.
+///     At the end, disables the button's GameObject.
 /// </summary> <remarks>
-/// Attach this to the GameObject with a UIDocument that loads the start button.
+///     Attach this to the GameObject with a UIDocument that loads the start button.
 /// </remarks>
 
 [RequireComponent(typeof(UIDocument))]
