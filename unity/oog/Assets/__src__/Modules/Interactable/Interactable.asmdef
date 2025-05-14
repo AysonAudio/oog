@@ -1,0 +1,19 @@
+{
+    "name": "Interactable",
+    "rootNamespace": "Oog",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:61ec80cbd91739d4c922ca8ab6bd1541",
+        "GUID:dc35e41c245b4e4fa7fa06fe0f201fb9",
+        "GUID:07ca3f1136bf422cb7ced5248de36273"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
