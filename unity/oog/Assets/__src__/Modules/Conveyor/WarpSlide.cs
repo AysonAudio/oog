@@ -45,8 +45,10 @@ public class WarpSlide : MonoBehaviour {
         if (_displacementSinceLastWarp.magnitude > distancePerWarp) {
             _displacementSinceLastWarp -= displacementPerPeriod.normalized * distancePerWarp;
             _swapped = !_swapped;
-            slidingObject1.localPosition = _swapped ? localStartPosition2 : localStartPosition1;
-            slidingObject2.localPosition = _swapped ? localStartPosition1 : localStartPosition2;
+            if (slidingObject1)
+                slidingObject1.localPosition = _swapped ? localStartPosition2 : localStartPosition1;
+            if (slidingObject2)
+                slidingObject2.localPosition = _swapped ? localStartPosition1 : localStartPosition2;
         }
 
         // Every period, displace both objects
