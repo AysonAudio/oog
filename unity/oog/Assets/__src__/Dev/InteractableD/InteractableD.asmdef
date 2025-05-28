@@ -1,0 +1,19 @@
+{
+    "name": "InteractableD",
+    "rootNamespace": "Oog",
+    "references": [
+        "GUID:e9254b04f98c42c381d0f02c0319ce49",
+        "GUID:ecb5eb786e694f2589387df78888181c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
