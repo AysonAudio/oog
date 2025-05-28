@@ -31,6 +31,10 @@ public class Draggable : MonoBehaviour, InputSet.IDragActions {
 
     // Serialized Fields
     public DragTrigger dragTriggers = DragTrigger.Click;
+    public bool clampMin;
+    public bool clampMax;
+    public Vector3 clampWorldMin = Vector3.zero;
+    public Vector3 clampWorldMax = Vector3.zero;
 
     // Encapsulated Properties
     public Vector2 PointerPosition { get; private set; }
@@ -108,7 +112,16 @@ public class Draggable : MonoBehaviour, InputSet.IDragActions {
         PointerPosition = context.ReadValue<Vector2>();
         if (DragStatus == DragMode.None) return;
         var cam = Sensor.MainCam;
-        transform.position = cam.ScreenToWorldPoint(PointerPosition, transform.position);
+        var worldPoint = cam.ScreenToWorldPoint(PointerPosition, transform.position);
+        if (clampMin) {
+            worldPoint.x = Mathf.Max(worldPoint.x, clampWorldMin.x);
+            worldPoint.y = Mathf.Max(worldPoint.y, clampWorldMin.y);
+            worldPoint.z = Mathf.Max(worldPoint.z, clampWorldMin.z);
+        } if (clampMax) {
+            worldPoint.x = Mathf.Min(worldPoint.x, clampWorldMax.x);
+            worldPoint.y = Mathf.Min(worldPoint.y, clampWorldMax.y);
+            worldPoint.z = Mathf.Min(worldPoint.z, clampWorldMax.z);
+        } transform.position = worldPoint;
         OnDragMove?.Invoke(context);
     }
 
