@@ -6,7 +6,7 @@ namespace Oog.Modules.Interactable  {
 ///     While dragging, maps 2D offset to depth offset.
 /// </summary> <remarks> <para>
 ///     If the Draggable component is set to clamp,
-///     it takes precedence over the clamp setting of this DepthMagnet component.
+///     the clamp setting of this DepthMagnet component has no effect.
 /// </para> <para>
 ///     When dragging starts, constructs an axis at this object.
 ///     +X and +Y are in the direction of a target point.
@@ -99,15 +99,13 @@ public class DepthMagnet : MonoBehaviour {
 
     /// <remarks>
     /// Callback for Draggable.OnDragMove. <br/>
-    /// Clamps if all true: <list type="bullet">
-    ///     <item> <description> Draggable would not have clamped. </description> </item>
-    ///     <item> <description> DepthMagnet would have clamped. </description> </item>
-    /// </list> </remarks>
+    /// Clamps if the Draggable component is not set to clamp.
+    /// </remarks>
     void UpdateDepth(InputAction.CallbackContext ctx) {
         var displacement = transform.position - AxisWorldOrigin;
         displacement.z = (displacement.x + displacement.y) * scaleZ;
-        if (!Drag.IsDragging && !Drag.clampMin && clampMinZ) displacement.z = Mathf.Max(displacement.z, clampWorldMinZ);
-        if (!Drag.IsDragging && !Drag.clampMax && clampMaxZ) displacement.z = Mathf.Min(displacement.z, clampWorldMaxZ);
+        if (!Drag.clampMin && clampMinZ) displacement.z = Mathf.Max(displacement.z, clampWorldMinZ);
+        if (!Drag.clampMax && clampMaxZ) displacement.z = Mathf.Min(displacement.z, clampWorldMaxZ);
         transform.position = AxisWorldOrigin + displacement;
     }
 

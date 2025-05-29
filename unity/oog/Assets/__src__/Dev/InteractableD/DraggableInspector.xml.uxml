@@ -3,9 +3,48 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:engine="UnityEngine.UIElements"
     xmlns:editor="UnityEditor.UIElements"
+    editor-extension-mode="True"
     xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd">
     <engine:Style src="InteractableD.style.tss" />
-    <engine:VisualElement class="footer">
-        <engine:Label text="Lorem ipsum dolor sit" name="title" />
-    </engine:VisualElement>
+
+<engine:VisualElement name="clamp">
+    <engine:HelpBox message-type="Info" class="info">
+        <engine:Label parse-escape-sequences="true" text="
+            Allows a screen space pointer to drag-and-drop this object in world space. \n
+            Drags on a plane parallel to the camera clip plane. \n
+            Quickly tapping the pointer toggles dragging. \n
+            Holding the pointer enables dragging until release. \n
+            For more details, see script comments.
+        "/>
+    </engine:HelpBox>
+
+    <engine:Label text="Cursor Visibility" class="title" />
+    <engine:Box class="section row">
+        <engine:Label text="HIDE" class="text" />
+        <engine:Toggle name="hideCursorOnDragStart" binding-path="hideCursorOnDragStart" />
+        <engine:Label text="on drag start" class="row-caption" />
+    </engine:Box>
+    <engine:Box class="section row">
+        <engine:Label text="SHOW" class="text" />
+        <engine:Toggle name="unhideCursorOnDragEnd" binding-path="unhideCursorOnDragEnd" />
+        <engine:Label text="on drag end" class="row-caption" />
+    </engine:Box>
+
+    <engine:Label text="Clamp Position" class="title" />
+    <engine:Box class="section row">
+        <engine:VisualElement class="row">
+            <engine:Label text="MIN" class="text" />
+            <engine:Toggle name="clampMin" binding-path="clampMin" />
+        </engine:VisualElement>
+        <engine:Vector3Field name="clampWorldMin" binding-path="clampWorldMin" class="row-content"/>
+    </engine:Box>
+
+    <engine:Box class="section row">
+        <engine:VisualElement class="row">
+            <engine:Label text="MAX" class="text" />
+            <engine:Toggle name="clampMax" binding-path="clampMax" />
+        </engine:VisualElement>
+        <engine:Vector3Field name="clampWorldMax" binding-path="clampWorldMax" class="row-content"/>
+    </engine:Box>
+</engine:VisualElement>
 </engine:UXML>

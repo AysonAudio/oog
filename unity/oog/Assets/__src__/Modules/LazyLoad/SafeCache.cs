@@ -32,7 +32,7 @@ public class SafeCache<T> where T : ScriptableObject {
                                             #region Public Methods
                                             ////////////////////////////////////
 
-    public bool TryGetAsset(out ScriptableObject? asset) {
+    public bool TryGetAsset(out T? asset) {
         asset = null;
         _asyncLoader ??= Addressables.LoadAssetAsync<T>(AssetAddress);
         if (!_asyncLoader.Value.IsValid()) return false;

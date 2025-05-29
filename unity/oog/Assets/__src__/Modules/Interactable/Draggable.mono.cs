@@ -31,6 +31,8 @@ public class Draggable : MonoBehaviour, InputSet.IDragActions {
 
     // Serialized Fields
     public DragTrigger dragTriggers = DragTrigger.Click;
+    public bool hideCursorOnDragStart;
+    public bool unhideCursorOnDragEnd;
     public bool clampMin;
     public bool clampMax;
     public Vector3 clampWorldMin = Vector3.zero;
@@ -140,6 +142,7 @@ public class Draggable : MonoBehaviour, InputSet.IDragActions {
     /// </remarks>
     void TurnOnDragMode(InputAction.CallbackContext context, DragMode dragMode) {
         if (DragStatus == DragMode.None) {
+            if (hideCursorOnDragStart) Cursor.visible = false;
             Sensor.IsPaused = true;
             OnDragStart?.Invoke(context);
         } DragStatus.AddFlag(dragMode);
@@ -155,6 +158,7 @@ public class Draggable : MonoBehaviour, InputSet.IDragActions {
     /// </remarks>
     void TurnOnDrag(InputAction.CallbackContext context) {
         if (DragStatus == DragMode.None) {
+            if (hideCursorOnDragStart) Cursor.visible = false;
             Sensor.IsPaused = true;
             OnDragStart?.Invoke(context);
         } DragStatus.AddAllFlags();
@@ -172,6 +176,7 @@ public class Draggable : MonoBehaviour, InputSet.IDragActions {
         if (DragStatus == DragMode.None) return;
         DragStatus.RemoveFlag(dragMode);
         if (DragStatus != DragMode.None) return;
+        if (unhideCursorOnDragEnd) Cursor.visible = true;
         Sensor.IsPaused = false;
         OnDragEnd?.Invoke(context);
     }
@@ -186,6 +191,7 @@ public class Draggable : MonoBehaviour, InputSet.IDragActions {
     /// </remarks>
     void TurnOffDrag(InputAction.CallbackContext context) {
         if (DragStatus == DragMode.None) return;
+        if (unhideCursorOnDragEnd) Cursor.visible = true;
         DragStatus = DragMode.None;
         Sensor.IsPaused = false;
         OnDragEnd?.Invoke(context);
